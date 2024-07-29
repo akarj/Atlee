@@ -2,7 +2,7 @@ import { postData } from '../../Fixtures/PostData';
 import CreatePost from '../../Components/CreatePost';
 import React, { useState } from 'react';
 import PostCard from '../../Components/Posts';
-import SignInModel from '@components/Model/SignIn';
+import SignInModel from '../../Components/Model/SignIn';
 
 const HomePage: React.FC = () => {
     const [show, setShow] = useState<boolean>(false);

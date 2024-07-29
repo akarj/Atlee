@@ -122,10 +122,10 @@ input:focus {
     outline: none;
 }
 
-.otl {
+.otll {
     outline: 2px solid black;
 }
-.test {
+.testt {
     border: 2px solid red;
 }
 @keyframes fill-change {
