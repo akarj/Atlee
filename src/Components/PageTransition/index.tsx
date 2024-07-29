@@ -14,7 +14,7 @@ export const TransitionLink: React.FC<TransitionLinkProps> = ({ children, to }) 
     };
 
     return (
-        <motion.a whileTap={{ scale: 0.9 }} onTap={handleTransition}>
+        <motion.a whileTap={{ scale: 0.9 }} onTap={handleTransition} className="cursor-pointer">
             {children}
         </motion.a>
     );

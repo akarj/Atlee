@@ -25,9 +25,9 @@
 
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import RegisterForm from '@pages/Register';
-import LoginForm from '@pages/Login';
-import HomePage from '@pages/Home';
+import RegisterForm from './pages/Register';
+import LoginForm from './pages/Login';
+import HomePage from './pages/Home';
 import { AnimatePresence } from 'framer-motion';
 import './App.css';
 
