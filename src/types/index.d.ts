@@ -61,6 +61,7 @@ declare global {
         children: ReactNode;
         type?: 'dialog' | 'section';
         open?: boolean;
+        closeHandler?: () => void;
     }
     interface ModelComponentProps {
         children: ReactNode;

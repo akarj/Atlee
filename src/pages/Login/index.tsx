@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { pageVariants } from '../../assets/animationVariants';
 import Model from '../../Components/Model';
 
 const LoginForm: React.FC = () => {
+    const [email, setEmail] = useState<string>('');
+    const [password, setPassword] = useState<string>('');
+
     return (
         <motion.section
             className="w-full h-full flex justify-center"
@@ -31,8 +34,10 @@ const LoginForm: React.FC = () => {
                             htmlFor="Email"
                             id="Email"
                             name="Email"
-                            value="as"
-                            onChange={() => {}}
+                            value={email}
+                            onChange={(e) => {
+                                setEmail(e.target.value);
+                            }}
                             label="Email or Username"
                         />
                         <Model.PasswordInput
@@ -41,8 +46,10 @@ const LoginForm: React.FC = () => {
                             htmlFor="Password-input"
                             id="Password"
                             name="Password"
-                            value=""
-                            onChange={() => {}}
+                            value={password}
+                            onChange={(e) => {
+                                setPassword(e.target.value);
+                            }}
                             label="Password"
                         />
                         <button type="submit" className="rounded text-base font-medium w-full text-center mt-4 font-inherit bg-blue-100">

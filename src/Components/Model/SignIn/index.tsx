@@ -1,11 +1,16 @@
 import React from 'react';
 import Model from '..';
 
-const SignInModel: React.FC<SignInModelProps> = ({ show = true }) => {
+const SignInModel: React.FC<SignInModelProps> = ({ show = true, setShow }) => {
     return (
         <>
             <Model>
-                <Model.Container open={show}>
+                <Model.Container
+                    open={show}
+                    closeHandler={() => {
+                        if (setShow) setShow(false);
+                    }}
+                >
                     <Model.Header title="WELCOME BACK" subTitle="Log into your account" />
                     <Model.TextInput
                         placeholder="Enter your email or username"
