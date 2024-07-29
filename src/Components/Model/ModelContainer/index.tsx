@@ -8,7 +8,7 @@ const FormContainer: React.FC<{ children: ReactNode }> = ({ children }) => {
     );
 };
 
-const ModelContainer: React.FC<ModelContainerProps> = ({ children, type = 'dialog' }) => {
+const ModelContainer: React.FC<ModelContainerProps> = ({ children, type = 'dialog', open = true }) => {
     if (type === 'section') {
         return (
             <>
@@ -21,7 +21,7 @@ const ModelContainer: React.FC<ModelContainerProps> = ({ children, type = 'dialo
 
     return (
         <>
-            <dialog open className="bg-card-gradient rounded-lg w-2/5 min-h-2/5 max-h-fit-content p-[2px]">
+            <dialog open={open} className="bg-card-gradient rounded-lg w-2/5 min-h-2/5 max-h-fit-content p-[2px]">
                 <FormContainer>{children}</FormContainer>
             </dialog>
         </>

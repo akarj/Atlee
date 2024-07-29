@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CreatePost = () => {
+const CreatePost: React.FC<CreatePostProps> = ({ userLoggedIn }) => {
     return (
         <>
             <div className="bg-bg-2 w-full rounded-lg px-5 pt-[24px] pb-2 mt-10 border-2 border-solid border-100">
@@ -24,7 +24,10 @@ const CreatePost = () => {
                         />
                     </div>
                     <div className="w-full flex  flex-row justify-end">
-                        <button className="mt-4 text-white-100 py-2 px-4 hover:bg-blue-500 rounded text-base font-medium w-1/5 text-center font-inherit bg-blue-100">
+                        <button
+                            className="mt-4 text-white-100 py-2 px-4 hover:bg-blue-500 rounded text-base font-medium w-1/5 text-center font-inherit bg-blue-100"
+                            onClick={userLoggedIn}
+                        >
                             Post
                         </button>
                     </div>

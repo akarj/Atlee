@@ -60,6 +60,7 @@ declare global {
     interface ModelContainerProps {
         children: ReactNode;
         type?: 'dialog' | 'section';
+        open?: boolean;
     }
     interface ModelComponentProps {
         children: ReactNode;
@@ -107,5 +108,14 @@ declare global {
         TextInput: FC<TextInputProps>;
         PasswordInput: FC<TextInputProps>;
         Footer: FC<ModelFooterProps>;
+    }
+
+    interface SignInModelProps {
+        show?: boolean;
+        setShow?: React.Dispatch<React.SetStateAction<boolean>>;
+    }
+
+    interface CreatePostProps {
+        userLoggedIn: () => void;
     }
 }
