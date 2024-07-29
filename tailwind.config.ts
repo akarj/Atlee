@@ -70,6 +70,7 @@ const config = {
                 DEFAULT: '1px',
                 '0': '0px',
                 '1': '1.5px',
+                '2': '2px',
             },
             borderColor: {
                 DEFAULT: 'rgba(0, 0, 0, 0.1)',

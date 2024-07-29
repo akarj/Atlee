@@ -108,15 +108,24 @@ button:focus-visible {
     animation: fill-change 0.25s ease-in-out forwards;
 }
 
+input:active,
+input:hover,
+input:target,
+input:focus,
+input:focus {
+    outline-width: 1px;
+    outline: none;
+}
+
 .passwordInputContainer > button:focus,
 .passwordInputContainer > button:focus-visible {
     outline: none;
 }
 
-.otl {
+.otll {
     outline: 2px solid black;
 }
-.test {
+.testt {
     border: 2px solid red;
 }
 @keyframes fill-change {

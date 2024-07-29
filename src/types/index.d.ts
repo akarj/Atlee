@@ -85,6 +85,22 @@ declare global {
         to: string;
     }
 
+    interface Post {
+        id: string;
+        profilePic: string;
+        attribute: string;
+        name: string;
+        reaction: string;
+        content: string;
+        commentCount: number;
+        createdAt: Date;
+        updatedAt: Date;
+    }
+
+    interface PostProps extends Post {
+        children?: ReactNode;
+    }
+
     interface ModelComponent {
         Container: FC<ModelContainerProps>;
         Header: FC<ModelHeaderProps>;
